@@ -8,7 +8,7 @@ WORKDIR /app
 COPY backend/target/backend-0.0.1.jar app.jar
 
 # 复制前端构建好的静态文件到后端的静态资源目录
-COPY frontend/build /app/public
+COPY frontend/dist /app/public
 
 # 设置环境变量
 ENV JAVA_OPTS=""
