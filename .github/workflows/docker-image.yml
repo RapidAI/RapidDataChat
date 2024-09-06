@@ -57,7 +57,7 @@ jobs:
         with:
           context: .  # 使用 Dockerfile 所在的当前目录
           push: true
-          tags: a18863076056050/RapidDataChat:latest
+          tags: a18863076056050/rapiddatachat:latest
 
       # 9. 可选：将 Git 提交 SHA 作为镜像标签推送
       - name: Push image with Git SHA tag
@@ -65,4 +65,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: a18863076056050/RapidDataChat:${{ github.sha }}
+          tags: a18863076056050/rapiddatachat:${{ github.sha }}
