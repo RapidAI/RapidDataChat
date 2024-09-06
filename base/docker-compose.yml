@@ -1,22 +1,20 @@
 services:
   # 向量数据库做检索使用
   xinference:
-    image: xprobe/xinference:v0.14.0 # 使用的Docker镜像
+    image: xprobe/xinference:latest-cpu # 使用的Docker镜像
     container_name: xinference # 容器名称
     volumes:
       - ./cache/.xinference:/root/.xinference # 绑定主机和容器的目录
       - ./cache/huggingface:/root/.cache/huggingface
       - ./cache/modelscope:/root/.cache/modelscope
-    environment:
-      XINFERENCE_MODEL_SRC: modelscope
     ports:
       - "9997:9997" # 映射端口
     restart: always # 容器重启策略
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [ "gpu" ]
+#    deploy:
+#      resources:
+#        reservations:
+#          devices:
+#            - capabilities: [ "gpu" ]
     command: xinference-local -H 0.0.0.0 # 容器启动时运行的命令
 
   pgvector:
