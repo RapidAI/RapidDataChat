@@ -31,3 +31,14 @@ services:
       POSTGRES_PASSWORD: root
     volumes:
       - ./data/pgdata:/var/lib/postgresql/data
+
+  rapiddatachat:
+    image: a18863076056050/rapiddatachat
+    restart: always
+    container_name: rapiddatachat
+    ports:
+      - "8080:8080"
+    environment:
+      TZ: Asia/Shanghai   # 设置时区
+    volumes:
+      - ./data/pgdata:/var/lib/postgresql/data

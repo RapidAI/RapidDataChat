@@ -4,7 +4,7 @@ spring:
     name: RapidDataChat-backend
 
   datasource:
-    url: jdbc:postgresql://192.168.3.14:5432/RapidDataChat_db
+    url: jdbc:postgresql://pgvector:5432/RapidDataChat_db
     username: root
     password: root
     driver-class-name: org.postgresql.Driver
@@ -32,7 +32,7 @@ spring:
       enabled: true  # 启用Spring DevTools自动重启功能
 
 server:
-  port: 8081  # 服务器端口号
+  port: 8080  # 服务器端口号
   error:
     include-message: always  # 错误信息包含在响应中
     include-binding-errors: always  # 绑定错误信息包含在响应中
@@ -61,7 +61,7 @@ springdoc:
 # 自定义配置
 embedding:
   api:
-    url: http://192.168.3.14:9997/v1/embeddings  # 嵌入API的URL
+    url: http://xinference:9997/v1/embeddings  # 嵌入API的URL
 
 mybatis-plus:
   type-handlers-package: com.RapidDataChat.backend.typehandler  # MyBatis Plus类型处理器包路径
