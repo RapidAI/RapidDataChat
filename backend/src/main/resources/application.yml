@@ -2,10 +2,6 @@
 spring:
   application:
     name: RapidDataChat-backend
-  web:
-    resources:
-      static-locations: file:/app/public/ # 实际前后端分离的话需要去掉这个配置
-
   datasource:
     url: jdbc:postgresql://pgvector:5432/RapidDataChat_db
     username: root
