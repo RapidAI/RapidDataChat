@@ -1,6 +1,6 @@
 -- 创建数据库
-CREATE DATABASE mysqlgpt_db;
-\c mysqlgpt_db;
+CREATE DATABASE RapidDataChat_db;
+\c RapidDataChat_db;
 
 -- 数据库信息表，存储不同数据库的连接信息。
 CREATE TABLE IF NOT EXISTS database_info
