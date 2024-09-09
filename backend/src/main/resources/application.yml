@@ -3,7 +3,7 @@ spring:
   application:
     name: RapidDataChat-backend
   datasource:
-    url: jdbc:postgresql://pgvector:5432/RapidDataChat_db
+    url: jdbc:postgresql://pgvector:5432/rapiddatachat_db
     username: root
     password: root
     driver-class-name: org.postgresql.Driver

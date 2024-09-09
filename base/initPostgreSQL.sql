@@ -1,6 +1,6 @@
 -- 创建数据库
-CREATE DATABASE RapidDataChat_db;
-\c RapidDataChat_db;
+CREATE DATABASE rapiddatachat_db;
+\c rapiddatachat_db;
 
 -- 数据库信息表，存储不同数据库的连接信息。
 CREATE TABLE IF NOT EXISTS database_info
